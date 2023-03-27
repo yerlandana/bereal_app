@@ -158,6 +158,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="iPW-sd-Qwd" id="FXw-zj-SAk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSa-bC-LhK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,6 +241,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
+                                <connections>
+                                    <action selector="onSignUpTapped:" destination="3e5-Vp-UPD" eventType="touchUpInside" id="tkc-R9-mQJ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qgy-T3-Hce">
                                 <rect key="frame" x="48" y="442" width="296" height="34"/>
@@ -250,6 +256,11 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="Naw-Ux-gaQ"/>
+                    <connections>
+                        <outlet property="emailField" destination="qgy-T3-Hce" id="M1x-n7-zSn"/>
+                        <outlet property="passwordField" destination="emO-zv-Ndj" id="1ZT-R6-TxD"/>
+                        <outlet property="usernameField" destination="Tfh-9K-zFk" id="nS6-rO-vV5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utr-gD-7k1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
