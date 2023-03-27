@@ -42,6 +42,7 @@ class PostCell: UITableViewCell {
         }
 
         // Caption
+        print(post.caption!)
         captionLabel.text = post.caption
 
 
