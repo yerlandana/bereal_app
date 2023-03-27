@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -184,41 +185,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="nDB-6D-SaY">
-                                <rect key="frame" x="0.0" y="171" width="393" height="452"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="nDB-6D-SaY">
+                                <rect key="frame" x="8" y="103" width="377" height="443"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qzJ-6V-fMz">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder Image" translatesAutoresizingMaskIntoConstraints="NO" id="Huw-4L-FbC">
-                                        <rect key="frame" x="0.0" y="59" width="393" height="393"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Huw-4L-FbC">
+                                        <rect key="frame" x="0.0" y="67.666666666666657" width="377" height="374"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="Huw-4L-FbC" secondAttribute="height" multiplier="1:1" id="TsY-t9-pP4"/>
+                                            <constraint firstAttribute="width" secondItem="Huw-4L-FbC" secondAttribute="height" multiplier="1:1" id="e3N-TA-vFl"/>
                                         </constraints>
+                                        <imageReference key="image" image="photo.fill" catalog="system" symbolScale="default"/>
                                     </imageView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Huw-4L-FbC" secondAttribute="bottom" id="2MH-0J-7TY"/>
-                                    <constraint firstItem="Huw-4L-FbC" firstAttribute="top" secondItem="qzJ-6V-fMz" secondAttribute="bottom" constant="25" id="F61-bM-Z7d"/>
-                                    <constraint firstItem="Huw-4L-FbC" firstAttribute="leading" secondItem="nDB-6D-SaY" secondAttribute="leading" id="Jc2-gI-cy5"/>
-                                    <constraint firstAttribute="trailing" secondItem="Huw-4L-FbC" secondAttribute="trailing" id="nmi-Y9-5cI"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2sn-IF-KL1"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="nDB-6D-SaY" secondAttribute="trailing" id="Ut0-nj-ObV"/>
-                            <constraint firstItem="nDB-6D-SaY" firstAttribute="leading" secondItem="2sn-IF-KL1" secondAttribute="leading" id="vzL-9z-591"/>
+                            <constraint firstItem="2sn-IF-KL1" firstAttribute="trailing" secondItem="nDB-6D-SaY" secondAttribute="trailing" constant="8" id="FZA-zT-hcY"/>
+                            <constraint firstItem="nDB-6D-SaY" firstAttribute="leading" secondItem="2sn-IF-KL1" secondAttribute="leading" constant="8" id="UOK-Pe-12h"/>
+                            <constraint firstItem="nDB-6D-SaY" firstAttribute="top" secondItem="2sn-IF-KL1" secondAttribute="top" id="tbZ-Zx-Kcg"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wye-06-md1" appends="YES" id="qru-3f-AD4"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Haj-Hs-OTd">
                         <rightBarButtonItems>
                             <barButtonItem title="Share" id="1t0-Ir-PHe">
                                 <connections>
-                                    <action selector="onShareTapped:" destination="rd3-xZ-bJ8" id="qYf-Np-IF0"/>
+                                    <action selector="onShareTapped:" destination="rd3-xZ-bJ8" id="7Gp-fw-IqY"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="photo.stack" catalog="system" id="0zU-sO-W15">
@@ -231,10 +232,14 @@
                     <connections>
                         <outlet property="captionTextField" destination="qzJ-6V-fMz" id="wiy-AK-Ajp"/>
                         <outlet property="previewImageView" destination="Huw-4L-FbC" id="CFO-8i-mZr"/>
-                        <outlet property="shareButton" destination="1t0-Ir-PHe" id="F2E-1q-zke"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBF-C9-g2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wye-06-md1">
+                    <connections>
+                        <action selector="onViewTapped:" destination="rd3-xZ-bJ8" id="tEO-fG-W77"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1838.9312977099237" y="714.78873239436621"/>
         </scene>
@@ -333,7 +338,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Placeholder Image" width="120" height="120"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="photo.stack" catalog="system" width="128" height="122"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="secondaryLabelColor">

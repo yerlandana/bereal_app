@@ -40,8 +40,6 @@ class PostViewController: UIViewController {
     @IBAction func onShareTapped(_ sender: Any) {
         view.endEditing(true)
 
-        // TODO: Pt 1 - Create and save Post
-        
         guard let image = pickedImage,
               // Create and compress image data (jpeg) from UIImage
               let imageData = image.jpegData(compressionQuality: 0.1) else {
@@ -57,6 +55,7 @@ class PostViewController: UIViewController {
         // Set properties
         post.imageFile = imageFile
         post.caption = captionTextField.text
+        print(captionTextField.text!)
 
         // Set the user as the current user
         post.user = User.current
