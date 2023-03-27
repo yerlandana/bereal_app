@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E910B8229D1452000A063AB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E910B8129D1452000A063AB /* User.swift */; };
+		8E910B8429D1453300A063AB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E910B8329D1453300A063AB /* Post.swift */; };
+		8E910B8729D14A2100A063AB /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8E910B8629D14A2100A063AB /* ParseSwift */; };
+		8E910B8929D14B7D00A063AB /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E910B8829D14B7D00A063AB /* FeedViewController.swift */; };
+		8E910B8B29D14F5D00A063AB /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E910B8A29D14F5D00A063AB /* PostViewController.swift */; };
+		8E910B8D29D14F7C00A063AB /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E910B8C29D14F7C00A063AB /* PostCell.swift */; };
 		8EC45F7229D12E0100F02D2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45F7129D12E0100F02D2A /* AppDelegate.swift */; };
 		8EC45F7429D12E0100F02D2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45F7329D12E0100F02D2A /* SceneDelegate.swift */; };
 		8EC45F7629D12E0100F02D2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45F7529D12E0100F02D2A /* LoginViewController.swift */; };
@@ -16,6 +22,7 @@
 		8EC45F8929D12E0300F02D2A /* BeRealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45F8829D12E0300F02D2A /* BeRealTests.swift */; };
 		8EC45F9329D12E0300F02D2A /* BeRealUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45F9229D12E0300F02D2A /* BeRealUITests.swift */; };
 		8EC45F9529D12E0300F02D2A /* BeRealUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45F9429D12E0300F02D2A /* BeRealUITestsLaunchTests.swift */; };
+		8EC45FA629D13DF400F02D2A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45FA529D13DF400F02D2A /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E910B8129D1452000A063AB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8E910B8329D1453300A063AB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		8E910B8829D14B7D00A063AB /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		8E910B8A29D14F5D00A063AB /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		8E910B8C29D14F7C00A063AB /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		8EC45F6E29D12E0100F02D2A /* BeReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC45F7129D12E0100F02D2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EC45F7329D12E0100F02D2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +61,7 @@
 		8EC45F8E29D12E0300F02D2A /* BeRealUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeRealUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC45F9229D12E0300F02D2A /* BeRealUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeRealUITests.swift; sourceTree = "<group>"; };
 		8EC45F9429D12E0300F02D2A /* BeRealUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeRealUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8EC45FA529D13DF400F02D2A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E910B8729D14A2100A063AB /* ParseSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +147,8 @@
 		8EC45FA129D138F900F02D2A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8E910B8129D1452000A063AB /* User.swift */,
+				8E910B8329D1453300A063AB /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC45F7529D12E0100F02D2A /* LoginViewController.swift */,
+				8EC45FA529D13DF400F02D2A /* SignUpViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -148,6 +165,7 @@
 		8EC45FA329D1392000F02D2A /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				8E910B8A29D14F5D00A063AB /* PostViewController.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -155,6 +173,8 @@
 		8EC45FA429D1393700F02D2A /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				8E910B8829D14B7D00A063AB /* FeedViewController.swift */,
+				8E910B8C29D14F7C00A063AB /* PostCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -175,6 +195,9 @@
 			dependencies = (
 			);
 			name = BeReal;
+			packageProductDependencies = (
+				8E910B8629D14A2100A063AB /* ParseSwift */,
+			);
 			productName = BeReal;
 			productReference = 8EC45F6E29D12E0100F02D2A /* BeReal.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +270,9 @@
 				Base,
 			);
 			mainGroup = 8EC45F6529D12E0100F02D2A;
+			packageReferences = (
+				8E910B8529D14A2100A063AB /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+			);
 			productRefGroup = 8EC45F6F29D12E0100F02D2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -290,9 +316,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E910B8B29D14F5D00A063AB /* PostViewController.swift in Sources */,
 				8EC45F7629D12E0100F02D2A /* LoginViewController.swift in Sources */,
 				8EC45F7229D12E0100F02D2A /* AppDelegate.swift in Sources */,
+				8EC45FA629D13DF400F02D2A /* SignUpViewController.swift in Sources */,
+				8E910B8429D1453300A063AB /* Post.swift in Sources */,
+				8E910B8D29D14F7C00A063AB /* PostCell.swift in Sources */,
+				8E910B8229D1452000A063AB /* User.swift in Sources */,
 				8EC45F7429D12E0100F02D2A /* SceneDelegate.swift in Sources */,
+				8E910B8929D14B7D00A063AB /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +666,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E910B8529D14A2100A063AB /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/parse-community/Parse-Swift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E910B8629D14A2100A063AB /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E910B8529D14A2100A063AB /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8EC45F6629D12E0100F02D2A /* Project object */;
 }
