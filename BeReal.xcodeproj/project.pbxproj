@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8EC45F7229D12E0100F02D2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45F7129D12E0100F02D2A /* AppDelegate.swift */; };
 		8EC45F7429D12E0100F02D2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45F7329D12E0100F02D2A /* SceneDelegate.swift */; };
-		8EC45F7629D12E0100F02D2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45F7529D12E0100F02D2A /* ViewController.swift */; };
+		8EC45F7629D12E0100F02D2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45F7529D12E0100F02D2A /* LoginViewController.swift */; };
 		8EC45F7929D12E0100F02D2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC45F7729D12E0100F02D2A /* Main.storyboard */; };
 		8EC45F7B29D12E0300F02D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC45F7A29D12E0300F02D2A /* Assets.xcassets */; };
 		8EC45F7E29D12E0300F02D2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC45F7C29D12E0300F02D2A /* LaunchScreen.storyboard */; };
@@ -39,7 +39,7 @@
 		8EC45F6E29D12E0100F02D2A /* BeReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC45F7129D12E0100F02D2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EC45F7329D12E0100F02D2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8EC45F7529D12E0100F02D2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8EC45F7529D12E0100F02D2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8EC45F7829D12E0100F02D2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EC45F7A29D12E0300F02D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EC45F7D29D12E0300F02D2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,9 +99,12 @@
 		8EC45F7029D12E0100F02D2A /* BeReal */ = {
 			isa = PBXGroup;
 			children = (
+				8EC45FA429D1393700F02D2A /* Feed */,
+				8EC45FA329D1392000F02D2A /* Post */,
+				8EC45FA229D1390F00F02D2A /* Login */,
+				8EC45FA129D138F900F02D2A /* Models */,
 				8EC45F7129D12E0100F02D2A /* AppDelegate.swift */,
 				8EC45F7329D12E0100F02D2A /* SceneDelegate.swift */,
-				8EC45F7529D12E0100F02D2A /* ViewController.swift */,
 				8EC45F7729D12E0100F02D2A /* Main.storyboard */,
 				8EC45F7A29D12E0300F02D2A /* Assets.xcassets */,
 				8EC45F7C29D12E0300F02D2A /* LaunchScreen.storyboard */,
@@ -125,6 +128,35 @@
 				8EC45F9429D12E0300F02D2A /* BeRealUITestsLaunchTests.swift */,
 			);
 			path = BeRealUITests;
+			sourceTree = "<group>";
+		};
+		8EC45FA129D138F900F02D2A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8EC45FA229D1390F00F02D2A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8EC45F7529D12E0100F02D2A /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8EC45FA329D1392000F02D2A /* Post */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		8EC45FA429D1393700F02D2A /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EC45F7629D12E0100F02D2A /* ViewController.swift in Sources */,
+				8EC45F7629D12E0100F02D2A /* LoginViewController.swift in Sources */,
 				8EC45F7229D12E0100F02D2A /* AppDelegate.swift in Sources */,
 				8EC45F7429D12E0100F02D2A /* SceneDelegate.swift in Sources */,
 			);
