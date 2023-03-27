@@ -82,7 +82,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Post Cell" rowHeight="530" id="6wc-Sd-ax6" customClass="PostCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="530" id="6wc-Sd-ax6" customClass="PostCell">
                                         <rect key="frame" x="0.0" y="50" width="393" height="530"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6wc-Sd-ax6" id="02c-4U-Rqr">
@@ -137,6 +137,12 @@
                                                 <constraint firstItem="wel-zy-dD4" firstAttribute="leading" secondItem="02c-4U-Rqr" secondAttribute="leading" id="cyd-N4-Ni6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="aJh-bT-B9p" id="F7K-7g-zrH"/>
+                                            <outlet property="dateLabel" destination="32o-oC-6aH" id="nDU-8B-3P3"/>
+                                            <outlet property="postImageView" destination="P7W-P3-4Qt" id="CpA-fZ-ZeX"/>
+                                            <outlet property="usernameLabel" destination="z4i-Om-Xl1" id="hNz-19-rkX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -151,7 +157,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BeReal" id="Wq1-S1-YBf">
-                        <barButtonItem key="leftBarButtonItem" title="Log out" id="Ymj-xY-LHr"/>
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="Ymj-xY-LHr">
+                            <connections>
+                                <action selector="onLogOutTapped:" destination="gln-ag-Chm" id="nUF-jj-Jfe"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="6BL-v7-BAH">
                             <connections>
                                 <segue destination="rd3-xZ-bJ8" kind="show" id="VyD-KC-WDB"/>
@@ -182,13 +192,19 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Huw-4L-FbC">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder Image" translatesAutoresizingMaskIntoConstraints="NO" id="Huw-4L-FbC">
                                         <rect key="frame" x="0.0" y="59" width="393" height="393"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="Huw-4L-FbC" secondAttribute="height" multiplier="1:1" id="km0-YI-hUv"/>
+                                            <constraint firstAttribute="width" secondItem="Huw-4L-FbC" secondAttribute="height" multiplier="1:1" id="TsY-t9-pP4"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Huw-4L-FbC" secondAttribute="bottom" id="2MH-0J-7TY"/>
+                                    <constraint firstItem="Huw-4L-FbC" firstAttribute="top" secondItem="qzJ-6V-fMz" secondAttribute="bottom" constant="25" id="F61-bM-Z7d"/>
+                                    <constraint firstItem="Huw-4L-FbC" firstAttribute="leading" secondItem="nDB-6D-SaY" secondAttribute="leading" id="Jc2-gI-cy5"/>
+                                    <constraint firstAttribute="trailing" secondItem="Huw-4L-FbC" secondAttribute="trailing" id="nmi-Y9-5cI"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2sn-IF-KL1"/>
@@ -200,10 +216,23 @@
                     </view>
                     <navigationItem key="navigationItem" id="Haj-Hs-OTd">
                         <rightBarButtonItems>
-                            <barButtonItem title="Share" id="1t0-Ir-PHe"/>
-                            <barButtonItem title="Item" image="photo.stack" catalog="system" id="0zU-sO-W15"/>
+                            <barButtonItem title="Share" id="1t0-Ir-PHe">
+                                <connections>
+                                    <action selector="onShareTapped:" destination="rd3-xZ-bJ8" id="qYf-Np-IF0"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="photo.stack" catalog="system" id="0zU-sO-W15">
+                                <connections>
+                                    <action selector="onPickedImageTapped:" destination="rd3-xZ-bJ8" id="hnO-Z8-gJJ"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="captionTextField" destination="qzJ-6V-fMz" id="wiy-AK-Ajp"/>
+                        <outlet property="previewImageView" destination="Huw-4L-FbC" id="CFO-8i-mZr"/>
+                        <outlet property="shareButton" destination="1t0-Ir-PHe" id="F2E-1q-zke"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBF-C9-g2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,7 +298,7 @@
         <!--Navigation Controller-->
         <scene sceneID="a2O-uY-2jm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gja-39-K47" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="gja-39-K47" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xkm-az-ErY">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -287,7 +316,7 @@
         <!--Navigation Controller-->
         <scene sceneID="C1b-0B-XMj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eko-jK-YNW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="eko-jK-YNW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hbn-Md-Xo1">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -304,6 +333,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Placeholder Image" width="120" height="120"/>
         <image name="photo.stack" catalog="system" width="128" height="122"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="secondaryLabelColor">
