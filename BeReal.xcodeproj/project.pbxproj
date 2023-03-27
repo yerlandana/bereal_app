@@ -13,6 +13,7 @@
 		8E910B8929D14B7D00A063AB /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E910B8829D14B7D00A063AB /* FeedViewController.swift */; };
 		8E910B8B29D14F5D00A063AB /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E910B8A29D14F5D00A063AB /* PostViewController.swift */; };
 		8E910B8D29D14F7C00A063AB /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E910B8C29D14F7C00A063AB /* PostCell.swift */; };
+		8E910B9029D1500E00A063AB /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E910B8F29D1500E00A063AB /* DateFormatter+Extensions.swift */; };
 		8EC45F7229D12E0100F02D2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45F7129D12E0100F02D2A /* AppDelegate.swift */; };
 		8EC45F7429D12E0100F02D2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45F7329D12E0100F02D2A /* SceneDelegate.swift */; };
 		8EC45F7629D12E0100F02D2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC45F7529D12E0100F02D2A /* LoginViewController.swift */; };
@@ -48,6 +49,7 @@
 		8E910B8829D14B7D00A063AB /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		8E910B8A29D14F5D00A063AB /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		8E910B8C29D14F7C00A063AB /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		8E910B8F29D1500E00A063AB /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		8EC45F6E29D12E0100F02D2A /* BeReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC45F7129D12E0100F02D2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EC45F7329D12E0100F02D2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E910B8E29D14FD200A063AB /* Extenshions */ = {
+			isa = PBXGroup;
+			children = (
+				8E910B8F29D1500E00A063AB /* DateFormatter+Extensions.swift */,
+			);
+			path = Extenshions;
+			sourceTree = "<group>";
+		};
 		8EC45F6529D12E0100F02D2A = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		8EC45F7029D12E0100F02D2A /* BeReal */ = {
 			isa = PBXGroup;
 			children = (
+				8E910B8E29D14FD200A063AB /* Extenshions */,
 				8EC45FA429D1393700F02D2A /* Feed */,
 				8EC45FA329D1392000F02D2A /* Post */,
 				8EC45FA229D1390F00F02D2A /* Login */,
@@ -320,6 +331,7 @@
 				8EC45F7629D12E0100F02D2A /* LoginViewController.swift in Sources */,
 				8EC45F7229D12E0100F02D2A /* AppDelegate.swift in Sources */,
 				8EC45FA629D13DF400F02D2A /* SignUpViewController.swift in Sources */,
+				8E910B9029D1500E00A063AB /* DateFormatter+Extensions.swift in Sources */,
 				8E910B8429D1453300A063AB /* Post.swift in Sources */,
 				8E910B8D29D14F7C00A063AB /* PostCell.swift in Sources */,
 				8E910B8229D1452000A063AB /* User.swift in Sources */,

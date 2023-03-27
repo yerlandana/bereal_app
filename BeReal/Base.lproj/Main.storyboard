@@ -70,26 +70,48 @@
             </objects>
             <point key="canvasLocation" x="983.96946564885491" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--BeReal-->
         <scene sceneID="T8V-gc-Fjh">
             <objects>
-                <viewController id="gln-ag-Chm" sceneMemberID="viewController">
+                <viewController id="gln-ag-Chm" customClass="FeedViewController" customModule="BeReal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JrZ-rk-ov0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iPW-sd-Qwd">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Post Cell" id="6wc-Sd-ax6" customClass="PostCell">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6wc-Sd-ax6" id="02c-4U-Rqr">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tgz-mF-24l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iPW-sd-Qwd" firstAttribute="leading" secondItem="tgz-mF-24l" secondAttribute="leading" id="4iI-iw-qKj"/>
+                            <constraint firstItem="iPW-sd-Qwd" firstAttribute="top" secondItem="tgz-mF-24l" secondAttribute="top" id="BS8-OY-Zvw"/>
+                            <constraint firstItem="tgz-mF-24l" firstAttribute="bottom" secondItem="iPW-sd-Qwd" secondAttribute="bottom" id="CAs-0Y-2ZH"/>
+                            <constraint firstItem="tgz-mF-24l" firstAttribute="trailing" secondItem="iPW-sd-Qwd" secondAttribute="trailing" id="L4f-tr-Qo7"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Wq1-S1-YBf"/>
+                    <navigationItem key="navigationItem" title="BeReal" id="Wq1-S1-YBf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSa-bC-LhK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="984" y="715"/>
         </scene>
-        <!--View Controller-->
+        <!--Post View Controller-->
         <scene sceneID="1WR-1T-exo">
             <objects>
-                <viewController id="rd3-xZ-bJ8" sceneMemberID="viewController">
+                <viewController id="rd3-xZ-bJ8" customClass="PostViewController" customModule="BeReal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SlG-ru-EFa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
