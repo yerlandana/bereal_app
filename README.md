@@ -28,7 +28,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![](https://github.com/yerlandana/bereal_app/blob/main/Videoleap-F0AF9D1B-CE7E-4978-B5A0-6AB694586D86.MOV)
+Video was recorded on phone, that's why the size comes up too big. I will just leave a link to video short
+
+https://www.youtube.com/shorts/xZ8oOnO0BZs
 
 
 GIF created with imgur.com 
