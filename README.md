@@ -28,8 +28,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/yerlandana/bereal_app/blob/main/IMG_1425.GIF' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
+![](https://github.com/yerlandana/bereal_app/blob/main/Videoleap-F0AF9D1B-CE7E-4978-B5A0-6AB694586D86.MOV)
 
 
 GIF created with imgur.com 
