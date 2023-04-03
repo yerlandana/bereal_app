@@ -1,4 +1,4 @@
-# Project 6 - ** BeReal Clone **
+# Project 6 - **BeReal Clone**
 
 Submitted by: **Yerlanova Dana**
 
