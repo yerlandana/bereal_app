@@ -35,7 +35,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/yerlandana/bereal_app/blob/main/Simulator%20Screen%20Recording%20-%20iPhone%2014%20Pro%20-%202023-03-27%20at%2004.48.31.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/pya0YbG.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with imgur.com 
