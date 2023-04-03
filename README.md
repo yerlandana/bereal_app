@@ -1,31 +1,24 @@
-# bereal_app
- This project is the first part of a two-part project which clones some of the main functionalities of the trending app called BeReal. In this app, users post a photo of what they’re currently doing upon receiving a random notification during the day. Only after posting a photo can the user see their friends’ photos.
+# Project 6 - ** BeReal Clone **
 
-# Project 5 - *BeReal*
+Submitted by: **Yerlanova Dana**
 
-Submitted by: **Your Name Here**
+**BeReal Clone** is a project where you will add persistence and some cool BeReal functionality to the app.
 
-**BeReal** is an app that is the part of a two-part project which clones some of the main functionalities of the trending app called BeReal. In this app, users post a photo of what they’re currently doing upon receiving a random notification during the day. Only after posting a photo can the user see their friends’ photos.
-
-Time spent: **10** hours spent in total
+Time spent: **6** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [Y] User can register a new account
-- [Y] User can log in with newly created account
-- [Y] App has a feed of posts when user logs in
-- [Y] User can upload a new post which takes in a picture from photo library and a caption	
+- [x] User can launch camera to take photo instead of photo library
+- [x] User session persists when application is closed and relaunched
+- [x] Users are able to log out and return to sign in page
+- [x] Users are NOT able to see other photos until they upload their own	
  
 The following **optional** features are implemented:
 
-- [ ] Users can pull to refresh their feed and see a loading indicator
-- [ ] Users can infinite-scroll in their feed to see past the 10 most recent photos
-- [Y] Users can see location and time of photo upload in the feed	
-- [Y] User is able to logout
-- [Y] User stays logged in when app is closed and open again	
-
+- [ ] User receive notifcation when it is time to post
+- [ ] Users can make comments and view comments in posts	
 
 The following **additional** features are implemented:
 
@@ -39,6 +32,7 @@ Here's a walkthrough of implemented user stories:
 
 
 GIF created with imgur.com 
+
 
 ## License
 
