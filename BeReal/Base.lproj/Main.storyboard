@@ -164,7 +164,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="blurView" destination="KZN-bk-bQH" id="FWM-Gh-SRp"/>
+                                            <outlet property="blurView" destination="s8k-gl-CUm" id="YRz-M4-ywb"/>
                                             <outlet property="captionLabel" destination="aJh-bT-B9p" id="F7K-7g-zrH"/>
                                             <outlet property="dateLabel" destination="32o-oC-6aH" id="nDU-8B-3P3"/>
                                             <outlet property="postImageView" destination="iVn-CB-bij" id="7Mo-bW-E7y"/>

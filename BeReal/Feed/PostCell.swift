@@ -12,7 +12,7 @@ import AlamofireImage
 class PostCell: UITableViewCell {
     
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var blurView: UIView!
+    @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
