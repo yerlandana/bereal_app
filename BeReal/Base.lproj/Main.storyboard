@@ -104,12 +104,35 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P7W-P3-4Qt">
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OUw-Kj-0ti">
                                                             <rect key="frame" x="0.0" y="64.333333333333314" width="393" height="393"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iVn-CB-bij">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
+                                                                    <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                                </imageView>
+                                                                <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s8k-gl-CUm">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
+                                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KZN-bk-bQH">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    </view>
+                                                                    <blurEffect style="regular"/>
+                                                                </visualEffectView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="P7W-P3-4Qt" secondAttribute="height" multiplier="1:1" id="v0g-Dz-e4C"/>
+                                                                <constraint firstItem="s8k-gl-CUm" firstAttribute="top" secondItem="OUw-Kj-0ti" secondAttribute="top" id="GjM-Fj-Zd4"/>
+                                                                <constraint firstAttribute="trailing" secondItem="s8k-gl-CUm" secondAttribute="trailing" id="KMT-tw-g9O"/>
+                                                                <constraint firstItem="iVn-CB-bij" firstAttribute="leading" secondItem="OUw-Kj-0ti" secondAttribute="leading" id="LKG-Ry-npF"/>
+                                                                <constraint firstAttribute="trailing" secondItem="iVn-CB-bij" secondAttribute="trailing" id="WXo-ys-zg9"/>
+                                                                <constraint firstAttribute="width" secondItem="OUw-Kj-0ti" secondAttribute="height" multiplier="1:1" id="dVV-6D-tZZ"/>
+                                                                <constraint firstItem="iVn-CB-bij" firstAttribute="top" secondItem="OUw-Kj-0ti" secondAttribute="top" id="e6Q-Tw-BEK"/>
+                                                                <constraint firstAttribute="bottom" secondItem="iVn-CB-bij" secondAttribute="bottom" id="eCG-MR-M0L"/>
+                                                                <constraint firstAttribute="bottom" secondItem="s8k-gl-CUm" secondAttribute="bottom" id="mCh-g5-VH0"/>
+                                                                <constraint firstItem="s8k-gl-CUm" firstAttribute="leading" secondItem="OUw-Kj-0ti" secondAttribute="leading" id="slB-uf-JmX"/>
                                                             </constraints>
-                                                        </imageView>
+                                                        </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vwm-BT-zJP">
                                                             <rect key="frame" x="0.0" y="465.33333333333331" width="393" height="48.666666666666686"/>
                                                             <subviews>
@@ -128,6 +151,9 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="OUw-Kj-0ti" firstAttribute="width" secondItem="OUw-Kj-0ti" secondAttribute="height" multiplier="1:1" id="P6h-pz-5W0"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -138,9 +164,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="blurView" destination="KZN-bk-bQH" id="FWM-Gh-SRp"/>
                                             <outlet property="captionLabel" destination="aJh-bT-B9p" id="F7K-7g-zrH"/>
                                             <outlet property="dateLabel" destination="32o-oC-6aH" id="nDU-8B-3P3"/>
-                                            <outlet property="postImageView" destination="P7W-P3-4Qt" id="CpA-fZ-ZeX"/>
+                                            <outlet property="postImageView" destination="iVn-CB-bij" id="7Mo-bW-E7y"/>
                                             <outlet property="usernameLabel" destination="z4i-Om-Xl1" id="hNz-19-rkX"/>
                                         </connections>
                                     </tableViewCell>
@@ -219,6 +246,11 @@
                             <barButtonItem title="Share" id="1t0-Ir-PHe">
                                 <connections>
                                     <action selector="onShareTapped:" destination="rd3-xZ-bJ8" id="7Gp-fw-IqY"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="camera.fill" catalog="system" id="r37-gc-DS2">
+                                <connections>
+                                    <action selector="onTakePhotoTapped:" destination="rd3-xZ-bJ8" id="xWH-4K-a1E"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="photo.stack" catalog="system" id="0zU-sO-W15">
@@ -337,9 +369,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="photo.stack" catalog="system" width="128" height="122"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="quaternaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

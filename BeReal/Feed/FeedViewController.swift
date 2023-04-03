@@ -33,9 +33,13 @@ class FeedViewController: UIViewController {
     }
 
     private func queryPosts() {
+        let yesterdayDate = Calendar.current.date(byAdding: .day, value: (-1), to: Date())!
+        
         let query = Post.query()
             .include("user")
             .order([.descending("createdAt")])
+            .where("createdAt" >= yesterdayDate) // <- Only include results created yesterday onwards
+            .limit(10)
 
         // Fetch objects (posts) defined in query (async)
         query.find { [weak self] result in
@@ -83,6 +87,7 @@ extension FeedViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.configure(with: posts[indexPath.row])
+        
         return cell
     }
 }
